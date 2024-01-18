@@ -1,0 +1,61 @@
+img {
+  position: absolute;
+  left: 20%;
+  max-width: 35vw;
+  -webkit-animation: slide 20s;
+  animation: slide 20s;
+  -moz-animation: slide 20s;
+}
+
+.div_img {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.max-size {
+  font-size: 46px;
+}
+
+@media screen and (max-width: 929px) {
+  .text {
+    top: 10%
+  }
+}
+
+@media screen and (max-width: 493px) {
+  .max-size {
+    font-size: 30px;
+  }
+
+  .text {
+    top: 20%;
+    left: 10%;
+  }
+}

@@ -1,0 +1,72 @@
+img {
+  max-width: 35vw;
+  -webkit-animation: slide 20s;
+  animation: slide 20s;
+  -moz-animation: slide 20s;
+}
+
+.div_img {
+  background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(173, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+  z-index: 2;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+@import url('https://fonts.cdnfonts.com/css/novecento-slab-book');
+
+h1 {
+  color: var(--whiteColor);
+  font-size: 72px;
+  font-weight: 700;
+  font-family: 'Novecento slab Book';
+  text-shadow: 6px 6px 0px black;
+}
+
+.text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.max-size {
+  font-size: 46px;
+}
+
+@media screen and (max-width: 929px) {
+  .text {
+    top: 10%
+  }
+}
+
+@media screen and (max-width: 493px) {
+  .max-size {
+    font-size: 30px;
+  }
+
+  .text {
+    top: 20%;
+    left: 10%;
+  }
+}

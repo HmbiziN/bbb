@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-center col-12 p-3 bloc-container align-items-center">
+  <div id="map" class="col-2"></div>
+  <div class="infos-text col-6 bloc-content">
+    <div class="infos-price">
+      <h2>Infos pratiques</h2>
+      <p>Tarifs des licences</p>
+      <ul *ngFor="let licence of licences">
+        <li>{{licence.categorie | capitalize}} : {{licence.prix}}€ </li>
+      </ul>
+
+      <p>Pour plus de renseignements <a [routerLink]="['/contact']">contactez nous</a></p>
+    </div>
+    <div class="infos-access">
+      <h2>Accès</h2>
+      <ul>
+        <li><span class="redColor fw-bold">Lycée Lafayette</span> <br> Avenue Cochet de Saint-Vallier <br>43100 BRIOUDE
+        </li>
+        <li><span class="redColor fw-bold">Halle des sports</span> <br> 43100 BRIOUDE
+        </li>
+        <li><span class="redColor fw-bold">Gymnase et salle polyvalente</span> <br> Rue de la Croix Saint-Isidore
+          <br>43100 BRIOUDE</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div>
+  </div>
+</div>

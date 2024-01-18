@@ -1,0 +1,19 @@
+.div_exc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 5px 5px 5px grey;
+    background-color: whitesmoke;
+    color: black;
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+  } 
+  @media screen and (max-width:900px) {
+    *{
+        font-size: 10px;
+      }
+  }

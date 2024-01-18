@@ -1,0 +1,111 @@
+ .formContent{
+    margin-top: 30px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.box-form{
+    margin-top: 30px;
+    display: flex;
+}
+.inputs-container:nth-child(2) {
+    margin-left: 20px;
+  }
+.input-effect:nth-child(2) {
+    margin-top: 20px;
+  }
+  .inputs-container input {
+    min-width: 350px;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  textarea{
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .inputs-container input:focus, textarea:focus {
+    outline: 1px solid #483d41;
+  }
+.input-effect{
+    position: relative;
+}
+.effect{
+    border: 0;  
+    background: white;
+}
+ .effect ~ .focus-bg:before,
+.effect ~ .focus-bg:after{
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 0; 
+    height: 0; 
+    background-color: var(--redColor); 
+    transition: 0.3s; 
+    z-index: -1;
+}
+.effect:focus ~ .focus-bg:before,
+.has-content.effect ~ .focus-bg:before{
+    transition: 0.3s; 
+    width: 50%; 
+    height: 100%;
+}
+
+.effect ~ .focus-bg:after{
+    left: auto; 
+    right: 0; 
+    top: auto; 
+    bottom: 0;
+}
+.effect:focus ~ .focus-bg:after{
+    transition: 0.3s; 
+    width: 50%; 
+    height: 100%;
+}
+.effect ~ label{
+    position: absolute; 
+    left: 14px; 
+    width: 100%; 
+    top: 10px; 
+    color: #aaa; 
+    transition: 0.3s; 
+    z-index: -1; 
+    letter-spacing: 0.5px;
+}
+
+.effect:focus ~ label{
+    top: -21px; 
+    left: 0; 
+    font-size: 12px; 
+    color: var(--redColor); 
+    transition: 0.3s;
+} 
+
+button {
+    display: block;
+    margin: 20px auto ;
+    padding: 7px;
+    font-size: 15px;
+}
+  
+@media screen and (max-width:746px) {
+    .box-form{
+        flex-direction: column;
+    }
+    .inputs-container:nth-child(2){
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+input.ng-touched.ng-valid,
+textarea.ng-touched.ng-valid{
+    border: var(--successColor) 1px solid;
+}
+input.ng-touched.ng-invalid,
+textarea.ng-touched.ng-invalid{
+    border: var(--redColor) 1px solid;
+}

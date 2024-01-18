@@ -1,0 +1,13 @@
+<spinner [waitingFor]="albums"></spinner>
+<div class="container d-flex flex-wrap justify-content-center p-5">
+    <div *ngFor="let album of albums" class="card m-2" style="width: 18rem;">
+        <img class="card-img-top" src="{{album.couverture}}" alt="Card image cap">
+        <span class="spanNbr">+{{album.total_photos}}</span>
+        <div class="card-body">
+          <h5 class="card-title">{{album.titre | capitalize}}</h5>
+          <p class="card-text">{{album.description | capitalize}}</p>
+          <button class="cta1" (click)="goToDetail(album.id)">Voir l'album</button>
+        </div>
+      </div>
+</div>
+

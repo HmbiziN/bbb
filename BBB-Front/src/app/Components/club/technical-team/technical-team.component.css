@@ -1,0 +1,162 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+h2{
+  font-family: 'Poppins';
+  font-size: 40px;
+  color:rgb(50, 58, 69);
+}
+
+.box-tech{
+  position: relative;
+  -webkit-animation: fadein 5s;
+  animation: fadein 4s;
+-moz-animation: fadein 4s;
+}
+.box-tech .myCard{
+  position: relative;
+  width: 270px;
+  height: 400px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.box-tech .myCard:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--redColor);
+  clip-path: circle(150px at 80% 20%);
+  opacity: 0.70;
+  transition: 0.5s ease-in-out;
+}
+.box-tech .myCard:hover:before{
+  clip-path: circle(300px at 80% -20%);
+}
+.box-tech .myCard:after{
+  content: 'BBB';
+  position: absolute;
+  top: 55%;
+  left: -10%;
+  font-size: 10em;
+  font-weight: 800;
+  font-style: italic;
+  color: white;
+  opacity:0.05;
+}
+.box-tech .myCard .imgBx{
+  position: absolute;
+  top: 55%;
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.box-tech .myCard:hover .imgBx{
+  top: 27%;
+  transform: translateX(1%);
+}
+.box-tech .myCard .imgBx img{
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) ;
+  width: 180px;
+  max-height: 200px;
+  border: 5px solid #272133;
+  box-shadow: 0 10px 50px rgba(173, 5, 5, 5);
+}
+.box-tech .myCard .contentBx{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  color: white;
+}
+.box-tech .myCard .contentBx h3{
+  margin-top: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-weight: 700;
+}
+.box-tech .myCard .capacity-box{
+  visibility: hidden;
+}
+.capacity-box .icon{
+  background-color: white;
+  width: 20px;
+  }
+.box-tech .myCard:hover .capacity-box{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.2s;
+}
+.box-tech .myCard .capacity-box {
+  background-color: white;
+  border-radius: 8px;
+  position: absolute;
+  transition: 0.5s;
+  color: black;
+  bottom: 10%;
+  border: black 1px solid;
+}
+.box-tech .myCard .capacity-box .span1{
+  background-color: white;
+  color: white;
+  display: block;
+  width: 100%;
+  letter-spacing: 10px;
+  font-weight: 800;
+}
+.circle-red{
+  width: 20px;
+  height: 20px;
+  background-color: var(--redColor);
+  border-radius: 100%;
+  margin-right: 8px;
+}
+.circle-white{
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+.italic{
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 700;
+}
+.capacity-box:after{
+  padding-left: 12px;
+  font-style: italic;
+  content: 'Basket Ball Brivadois édition limitée';
+  background-color: var(--redColor);
+  color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  font-size: 12px;
+
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

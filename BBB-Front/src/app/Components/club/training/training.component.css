@@ -1,0 +1,34 @@
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+main {
+  background-color: #FCFBFC;
+}
+table{
+  width: 100vw;
+  table-layout: fixed;
+}
+table th,
+table td {
+  /* width: 100px; */
+  padding-left: 10px;
+}
+
+.calendar__info {
+  padding: 8px;
+}
+.calendar__day, .calendar__place{
+  color:var(--redColor);
+}
+.fs-12{
+  font-size: 12px
+}
+.border{
+  border-bottom: 1px solid black;
+}
+@media screen and (max-width:900px) {
+*{
+    font-size: 10px;
+  }
+}

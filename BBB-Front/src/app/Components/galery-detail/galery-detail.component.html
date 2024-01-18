@@ -1,0 +1,6 @@
+<div class="container d-flex flex-wrap justify-content-center p-5">
+  <div *ngFor="let p of album.photos" class="card m-2" style="width: 18rem;">
+    <img class="card-img-top" src="{{p.img}}" (click)="openImageInNewWindow(p.img)" alt="{{p.img}}">
+  </div>
+</div>
+<spinner [waitingFor]="album"></spinner>

@@ -1,0 +1,24 @@
+:root{
+    box-sizing: border-box;
+    --redColor: #AD0000;
+    --greyColor: #888687;
+    --darkGreyColor: #292527;
+    --whiteColor: #FFFFFF;
+}
+.redColor{
+    color: var(--redColor);
+  }
+h1, h2, h3, h4 {
+  font-family: "rockwell";
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: var(--darkGreyColor);
+  color: var(--whiteColor);
+  color: var(--whiteColor);
+  font-family: "tahoma";
+  font-weight: 400;
+}

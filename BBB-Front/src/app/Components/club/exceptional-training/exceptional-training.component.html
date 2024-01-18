@@ -1,0 +1,10 @@
+<div *ngIf="futureTrainings.length && isOpen" class="div_exc">
+    <div>
+        <h2 class="redColor">Entraînement exceptionnel</h2>
+    </div>
+  <div *ngFor="let t of allTraining">
+    <p><span class="redColor">{{t.equipe.nom}}</span>
+    {{t.jour | day | capitalize}} de {{t.debut|timeFormat}} à {{t.fin|timeFormat}} {{t.salle}}</p>
+  </div>
+  <button class="cta1" (click)="isOpen = false">Fermer</button>
+</div>

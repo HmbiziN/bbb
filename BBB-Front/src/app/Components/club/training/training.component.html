@@ -1,0 +1,23 @@
+       <h2 class="mt-3">ENTRAINEMENTS <span class="redColor mb-5">BBB</span></h2>
+
+       <div class="wrapper mt-5">
+         <main>
+           <table>
+             <tr>
+               <th>Jours</th>
+               <th *ngFor="let salle of salles" class="calendar__place">{{salle}}</th>
+             </tr>
+             <tr *ngFor="let day of days" class="border">
+               <td>
+                 <ng-container>{{day.name | day | capitalize}}</ng-container>
+               </td>
+               <td *ngFor="let salle of salles">
+                 <div class="calendar__info day fs-12" *ngFor="let training of day.trainings | trainingFilter:salle">
+                   <span class="redColor fw-bold">{{training.equipe.nom}} </span><br>
+                   {{training.debut | timeFormat}} - {{training.fin | timeFormat}}
+                 </div>
+               </td>
+             </tr>
+           </table>
+         </main>
+<app-exceptional-training></app-exceptional-training>

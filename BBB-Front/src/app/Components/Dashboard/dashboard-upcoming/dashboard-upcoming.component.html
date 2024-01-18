@@ -1,0 +1,37 @@
+<div class="container-fluid p-2 d-flex justify-content-around">
+
+    <div class="d-flex align-items-center me-2">
+        <div class="container-btn">
+            <a (click)="handleSection(3)" class="cta1-mini effect"
+               data-sm-link-text="Adulte">
+              <span>Adulte</span>
+            </a>
+            <a (click)="handleSection(2)" class="cta1-mini effect"
+               data-sm-link-text="Jeune">
+              <span>Jeune</span>
+            </a>
+            <a (click)="handleSection(1)" class="cta1-mini effect"
+               data-sm-link-text="mini">
+              <span>Mini</span>
+            </a>
+        </div>
+    </div>
+    <div class="d-flex flex-column col-9 box-result">
+        <h2 class="text-white mt-3">MATCHS A VENIR</h2>
+        <table class="table " *ngIf="!dataNull">
+            <thead class="whiteColor poppins">
+                <td class="fw-bold">BBB</td>
+                <td class="fw-bold">DATE</td>
+                <td class="fw-bold">ADVERSAIRE</td>
+            </thead>
+            <tbody class="whiteColor flex-wrap" >
+                <tr *ngFor="let r of result | nearestDate : currentDate |slice:0:5" >
+                <td *ngIf="r.a_venir">{{r.equipe_1.nom}} </td>
+                <td *ngIf="r.a_venir">{{r.date | date:'dd/MM/yyyy'}} <br></td>
+                <td *ngIf="r.a_venir">{{r.equipe_2 | capitalize}} <br></td>
+            </tr>
+            </tbody>
+        </table>
+        <p *ngIf="dataNull" class="text-light">Il n'y a pas encore de matchs à venir!</p>
+    </div>
+</div>

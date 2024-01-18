@@ -1,0 +1,19 @@
+.container-dashboard{
+background-color: white;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items:flex-start;
+}
+
+@media screen and (max-width: 986px) {
+    .container-dashboard{
+        flex-direction: column;
+    }
+    app-dashboard-result, app-dashboard-upcoming{
+        width: 100%;
+    }
+    app-dashboard-upcoming{
+        margin-top: 2em;
+    }
+}

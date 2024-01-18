@@ -1,0 +1,41 @@
+  <div class="box-tech">
+    <spinner [waitingFor]="members"></spinner>
+    <div>
+      <h2 class="m-5 fw-bold">EQUIPE <span class="redColor">TECHNIQUE</span> </h2>
+    </div>
+    <div class="d-flex col-12 flex-wrap justify-content-center">
+      <div *ngFor="let m of members">
+        <div class="myCard m-2" *ngIf="m.pole === 'TECH'">
+          <div class="myCard">
+            <div class="imgBx">
+              <img *ngIf=" m.img != ''" src="{{m.img}}" class="myCard-img-top" alt="{{m.lastname}}">
+              <img *ngIf=" m.img === 'http://localhost:8000/bbb/files/profile-pictures/profile-base.png'"
+                src="assets/logoBBB.png" class="myCard-img-top card__img" alt="{{m.lastname}}">
+            </div>
+            <div class="contentBx">
+              <h3>{{m.nom | capitalize}} {{m.prenom | capitalize}}</h3>
+              <div class="team>">
+                <span>{{m.role|uppercase}}</span>
+              </div>
+            </div>
+            <div class="capacity-box p-1 col-12 ">
+              <div class="d-flex flex-column align-items-start ">
+                <div class="col-12 m-0 d-flex bg-light align-items-center">
+                  <span
+                    class="span1 mt-1 text-danger fw-bolder mb-3">{{m.capacites.length > 0 ? 'CAPACITES' :default}}</span>
+                  <div class="circle-white"></div>
+                  <div *ngFor="let c of m.capacites" class="circle-red"></div>
+                </div>
+                <div class="d-flex mt-2 mb-3" *ngFor="let c of m.capacites">
+                  <ng-container *ngIf="c">
+                    <div class="circle-red"></div>
+                    <span *ngIf="c.capacite" class="italic">{{c.capacite | capitalize}}</span>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

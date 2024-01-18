@@ -1,0 +1,17 @@
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+h2{
+  font-family: 'Poppins';
+  font-size: 40px;
+  color:rgb(50, 58, 69);
+}
+.logo{
+    max-width: 300px;
+}
+@media screen and (max-width:1200px) {
+  .content-box, .logo{
+    padding: 1em;
+  }
+}

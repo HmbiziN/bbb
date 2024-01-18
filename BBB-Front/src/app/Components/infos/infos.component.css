@@ -1,0 +1,32 @@
+#map{
+    width: 80%;
+    height: 500px;
+    margin: 1em;
+    z-index: 1;
+}
+a{
+    color: var(--redColor);
+    font-weight: 700;
+}
+h2{
+    font-size: 40px;
+color: rgb(50, 58, 69);
+}
+@media screen and (max-width:1079px){
+    .bloc-container{
+        flex-wrap: wrap-reverse;
+    }
+    .bloc-content{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:682px){
+    .infos-access, .infos-price{
+        width: 100%;
+        text-align: center;
+    }
+}

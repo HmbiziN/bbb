@@ -1,0 +1,13 @@
+img{
+    position: relative;
+}
+.spanNbr{
+    background-color: white;
+    padding: 1em;
+    position: absolute;
+    top: 0%;
+    right: 0;
+}
+.card-img-top{
+    height: 70%;
+}

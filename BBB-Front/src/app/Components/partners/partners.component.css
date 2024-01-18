@@ -1,0 +1,40 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+h2{
+  font-family: 'Poppins';
+  font-size: 40px;
+  color:rgb(50, 58, 69);
+}
+.box-tech .content-box{
+    background-color: var(--redColor);
+    color: white;
+    padding: 1em;
+    margin-bottom: 10vh;
+}
+img{
+    width: 250px;
+    height: 148px;
+    /* object-fit: cover; */
+    -webkit-animation: fadein 5s;
+    animation: fadein 4s;
+    -moz-animation: fadein 4s;
+    cursor: pointer;
+}
+
+@-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

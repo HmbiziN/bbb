@@ -1,0 +1,28 @@
+<spinner [waitingFor]="partners"></spinner>
+<div class="box-tech">
+  <div>
+    <h2 class="m-5 fw-bold redColor">NOS <span class="redColor">PARTENAIRES</span> </h2>
+  </div>
+  <div class="content-box d-flex flex-column align-items-center">
+    <p>Vous souhaitez soutenir un club de la ville de Brioude? Un partenariat représente à la fois une belle vitrine
+      pour votre entreprise et un soutien de poids pour notre club de Basket Ball. Rejoignez l'aventure à nos côtés!
+    </p>
+    <button class="btn1" [routerLink]="['/contact']">Devenir partenaire</button>
+  </div>
+  <div class="d-flex col-12 flex-wrap justify-content-center">
+
+    <div *ngFor="let p of partners">
+      <div class="myCard m-2 box">
+        <div class="myCard">
+          <div class="imgBx">
+              <img src="{{p.img}}" (click)='openWebsite(p.url)' class="myCard-img-top" alt="{{p.nom}}">
+          </div>
+          <div class="contentBx">
+            <div class="team>">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

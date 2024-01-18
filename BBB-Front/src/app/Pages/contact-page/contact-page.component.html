@@ -1,0 +1,121 @@
+<div class="formContent">
+  <h2>Formulaire de contact</h2>
+  <p class="redColor fw-bold" *ngIf="errorFields">Merci de remplir tous les champs</p>
+  <p class="successColor fw-bold" *ngIf="successMessage">Message envoyé! Nous vous répondrons dans les plus brefs délais</p>
+  <form [formGroup]="contactForm">
+    <div class="box-form">
+      <div class="inputs-container">
+        <div class="input-effect">
+          <input 
+            formControlName="nom" 
+            type="text" 
+            class="effect focus-bg" 
+            placeholder="Nom"
+          >
+          <label 
+            for="nom" 
+            *ngIf="contactForm.get('nom').hasError('minlength')"
+          >
+            Entrez un nom valide
+          </label>
+          <label 
+            class="text-dark" 
+            for="nom" 
+            *ngIf="!contactForm.get('nom').hasError('minlength')"
+            >
+            Votre nom
+          </label>
+    
+        </div>
+        <div class="input-effect ">
+          <input 
+            formControlName="prenom" 
+            type="text" 
+            class="effect focus-bg" 
+            placeholder="Prénom"
+            >
+          <label 
+            for="prenom" 
+            *ngIf="contactForm.get('prenom').hasError('minlength')"
+            >
+            Entrez votre prénom valide
+          </label>
+          <label 
+            class="text-dark" 
+            for="prenom" 
+            *ngIf="!contactForm.get('prenom').hasError('minlength')"
+            >
+            Votre prénom
+          </label>
+        </div>
+      </div>
+      <div class="inputs-container">
+        <div class="input-effect">
+          <input 
+            formControlName="expediteur" 
+            type="text" 
+            class="effect focus-bg" 
+            placeholder="Mail"
+          >
+          <label 
+            for="expediteur" 
+            *ngIf="contactForm.get('expediteur').hasError('email')">
+            Entrez une adresse mail valide
+          </label>
+          <label 
+          class="text-dark"
+            for="expediteur" 
+            *ngIf="!contactForm.get('expediteur').hasError('email')">
+            Email
+          </label>
+        </div>
+        <div class="input-effect ">
+          <input 
+            formControlName="telephone" 
+            type="text" 
+            class="effect focus-bg" 
+            placeholder="Numéro de téléphone"
+          >
+          <label 
+            for="telephone" 
+            *ngIf="contactForm.get('telephone').hasError('pattern')"
+            >
+            Entrez un numéro de téléphone valide
+          </label>
+          <label 
+            for="telephone" 
+            class="text-dark"
+            *ngIf="!contactForm.get('telephone').hasError('pattern')"
+            >
+            Numéro de téléphone
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="input-effect mt-5">
+        <textarea 
+          formControlName="message" 
+          class="effect focus-bg" 
+          rows="5" 
+          style="width: 100%; max-width: 100%;" 
+          placeholder="Ecrivez votre message">
+        </textarea>
+        <label 
+          for="message" 
+          *ngIf="contactForm.get('message').hasError('minlength')"
+          >
+          Votre message doit comporter au minimum 30 caractères
+        </label>
+        <label 
+          class="text-dark" 
+          for="message" 
+          *ngIf="!contactForm.get('message').hasError('minlength')"
+          >
+          Votre message
+        </label>
+      </div>
+    <button class="btn1" (click)="submit()">Envoyer</button>
+  </form>
+
+</div>
+

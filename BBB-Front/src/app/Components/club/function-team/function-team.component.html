@@ -1,0 +1,26 @@
+<div class="essai"></div>
+<div class="container-fluid m-5">
+  <h2 class="mt-5 mb-5 fw-bold">EQUIPE <span class="redColor fw-bold">FONCTIONNELLE</span></h2>
+  <div class="box-section d-flex flex-wrap justify-content-center align-items-start">
+    
+    <div class="test ">
+      <h3 class="fw-bolder">BUREAU</h3>
+      
+      <ul>
+        <li *ngFor="let member of members" >
+          <p *ngIf="member.pole==='FUNC'"><span class="redColor">{{member.role | uppercase}}</span> {{member.prenom | capitalize}} {{member.nom | capitalize}}</p>
+          
+        </li>
+      </ul>
+
+    </div>
+    <div class="test">
+      <h3 class="mb-2 fw-bolder">COMMISSIONS</h3>
+      <ul>
+        <li *ngFor="let member of members">
+          <p *ngIf="member.pole==='COM'"><span class="redColor">{{member.role | uppercase}}</span> {{member.prenom | capitalize}} {{member.nom | capitalize}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

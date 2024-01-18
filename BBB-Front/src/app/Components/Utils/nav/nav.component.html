@@ -1,0 +1,47 @@
+<div class="navbar ">
+  <div class="cont-logo justify-content-between">
+    <a [routerLink]="['/accueil']"><img src="assets/logoBBB.png" alt="logo basket ball brioude" class="logo"></a>
+    <div class="box">
+      <div class="contLigne btnHamburger" (click)="clickMenu()" [ngClass]="{'active': active === true}">
+        <div class="lignes"></div>
+        <div class="lignes"></div>
+        <div class="lignes"></div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-around align-items-center col-10">
+      <h1 [routerLink]="['/accueil']">BBB</h1>
+      <button [routerLink]="['/accueil']" class="btn btn-outline-light">Home</button>
+    </div>
+  </div>
+
+  <div class="cont-items mt-2" [ngClass]="{'responsive': menuMobile === true}">
+    <a href="" class="items"><img *ngIf="menuMobile == true" src="assets/logoBBB.png" alt="logo basket ball brioude"
+        class="logo-items"></a>
+    <a [routerLink]="['/accueil']" class="items">ACCUEIL</a>
+    <a class="items dropbtn" *ngIf="menuMobile == false" (click)="dropdownClick()">LE CLUB</a>
+    <a [routerLink]="['/club/presentation']" *ngIf="menuMobile == true" class="items a-drop">ENCADREMENT</a>
+    <a [routerLink]="['/club/training']" *ngIf="menuMobile == true" class="items a-drop">ENTRAINEMENTS</a>
+    <a [routerLink]="['/partenaires']" *ngIf="menuMobile == true" class="items a-drop">PARTENAIRES</a>
+    <a [routerLink]="['/infos']" *ngIf="menuMobile == true" class="items a-drop">INFOS PRATIQUES</a>
+
+
+    <!-- <a [routerLink]="['/section/1']" class="items " (click)="active=false" (click)="menuMobile=false ">ECOLE DE
+      BASKET</a> -->
+    <a href="" class="items" (click)="active=false" (click)="menuMobile=false" (click)="goToSection(1)">ECOLE DE
+      BASKET</a>
+    <a href="" class="items" (click)="active=false" (click)="menuMobile=false" (click)="goToSection(2)">JEUNES</a>
+    <a href="" class="items" (click)="active=false" (click)="menuMobile=false" (click)="goToSection(3)">ADULTES</a>
+    <a [routerLink]="['/galerie']" class="items "(click)="active=false" (click)="menuMobile=false">GALERIE</a>
+
+
+    <a href="" class="items" (click)="goToWebsite()">BOUTIQUE</a>
+
+    <div class="dropdown-content " *ngIf="dropdown">
+      <a [routerLink]="['/club/presentation']" class="items a-drop">ENCADREMENT</a>
+      <a [routerLink]="['/club/training']" class="items a-drop">ENTRAINEMENTS</a>
+      <a [routerLink]="['/partenaires']" class="items a-drop">PARTENAIRES</a>
+      <a [routerLink]="['/infos']" class="items a-drop">INFOS PRATIQUES</a>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,30 @@
+.container-fluid{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(173,0,0,1) 100%, rgba(0,212,255,1) 100%);
+    padding: 0;
+}
+img{
+    width: 30px;
+    height: 30px;
+}
+button{
+    font-size: 16px;
+}
+.header-box{
+    padding: 0;
+}
+.box-result{
+    text-align: start;
+}
+table tr, td{width: 300px; padding: 5px 0;}
+
+@media screen and (max-width: 875px) {
+    .container-fluid{
+        flex-direction: column-reverse;
+
+        align-items: center;
+    }
+    .box-result{
+        align-items: center;
+    }
+}
